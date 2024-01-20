@@ -1,28 +1,23 @@
-const buttons=document.querySelectorAll('.ripple')
-// when you click on the button it will be ripple effect
-buttons.forEach(button=>{
-    button.addEventListener('click',(e)=>{
+const buttons = document.querySelectorAll('.ripple')
 
-        const x = e.clientX
-        const y = e.clintY
+buttons.forEach(button => {
+    button.addEventListener('click', function (e) {
+        const x = e.pageX
+        const y = e.pageY
 
-        const buttonTop=e.target.offsetTop
+        const buttonTop = e.target.offsetTop
         const buttonLeft = e.target.offsetLeft
 
-
-        const xInside = x-buttonLeft
-        const yInside = y-buttonTop
+        const xInside = x - buttonLeft
+        const yInside = y - buttonTop
 
         const circle = document.createElement('span')
-        circle.classList.add('.circle')
-        circle.style.top=yInside + 'px'
-        circle.style.left=xInside + 'px'
-
-
+        circle.classList.add('circle')
+        circle.style.top = yInside + 'px'
+        circle.style.left = xInside + 'px'
 
         this.appendChild(circle)
 
-        setTimeout(()=>circle.remove(),500)
-
+        setTimeout(() => circle.remove(), 500)
     })
 })
