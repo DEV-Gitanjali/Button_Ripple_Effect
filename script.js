@@ -1,5 +1,8 @@
+// this method capture element
 const buttons = document.querySelectorAll('.ripple')
 
+
+// when you click on the button it will be ripple effect
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
         const x = e.pageX
