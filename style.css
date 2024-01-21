@@ -16,6 +16,7 @@ body {
   margin: 0;
 }
 
+/* this code for main button */
 button {
   background-color: purple;
   color: #fff;
@@ -28,11 +29,11 @@ button {
   margin: 10px 0;
   position: relative;
 }
-
+/* this code for button focus method */
 button:focus {
   outline: none;
 }
-
+/*this code for button circle method  */
 button .circle {
   position: absolute;
   background-color: #fff;
